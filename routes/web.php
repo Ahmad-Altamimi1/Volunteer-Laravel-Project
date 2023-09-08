@@ -33,9 +33,29 @@ Route::get('/dashboard', function () {
 
 
 
+Route::get('pages/index', [Controller::class, 'showhome'])
+    ->name('home');
+
+Route::get('pages/about', [Controller::class, 'showabout'])
+    ->name('about');
+
+Route::get('pages/contact', [Controller::class, 'showcontact'])
+    ->name('contact');
+
+Route::get('pages/causes', [Controller::class, 'showcauses'])
+    ->name('causes');
+
+Route::get('pages/news', [Controller::class, 'shownews'])
+    ->name('news');
 
 
-
+Route::view('/loadmins/login', 'loadmins.login');
+    
+// Route::view('pages/index', 'pages/index');
+// Route::view('pages/about', 'pages/about');
+// Route::view('pages/contact', 'pages/contact');
+// Route::view('pages/causes', 'pages/causes');
+// Route::view('pages/news', 'pages.news');
 
 
 Route::middleware('auth')->group(function () {
@@ -49,6 +69,5 @@ Route::get('paypal/success', [PaypalController::class, 'success'])->name('succes
 Route::get('paypal/cancel', [PaypalController::class, 'cancel'])->name('paypal_cancel'); // Use 'cancel' method for GET
 
 
-require __DIR__.'/admin.php';
 
 require __DIR__ . '/auth.php';

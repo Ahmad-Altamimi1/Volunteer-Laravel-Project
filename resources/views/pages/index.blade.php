@@ -88,6 +88,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</nav>
 
 	<div class="hero overlay" style="background-image: url('images/classroom-1.png')">

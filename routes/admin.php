@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginAdimn;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,25 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('admin')->name('loadimns.')->group(function () {
+
+
+    Route::middleware('isAdmin')->group(function () {
+
+        // display admin pages
+        Route::view('loadmins/login', 'loadmins.login');
+        Route::view('loadmins/dashboard','loadimns.dashboard');
+
+    });
+    require __DIR__ . '/admin_auth.php';
+
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-
-Route::view('pages/index','pages.home');
-Route::view('pages/about', 'pages.about');
-Route::view('pages/contact', 'pages.contact');
-Route::view('pages/causes', 'pages.causes');
-Route::view('pages/news', 'pages.news');
-
-
-
-
-
-require __DIR__.'/admin.php';
-
-require __DIR__ . '/auth.php';
