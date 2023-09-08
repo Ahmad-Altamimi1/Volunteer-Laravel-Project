@@ -7,6 +7,7 @@ use App\Http\Requests\StorepaypalRequest;
 use App\Http\Requests\UpdatepaypalRequest;
 use Illuminate\Http\Request;
 use Srmklive\PayPal\Services\PayPal as PayPalClient;
+use Illuminate\Support\Facades\DB;
 class PaypalController extends Controller
 {
     /**
@@ -61,6 +62,16 @@ class PaypalController extends Controller
         $paypaltoken =  $provider->getAccessToken();
         $response= $provider->capturePaymentOrder($request->token);
         if (isset($response['status']) && $response['status']== "COMPLETED") {
+
+            DB::table('paypals')->insert([
+                'paymen_id'=> $response['id'],
+                'user_name' =>$response['payment_source']['paypal']['name']['given_name'] . $response['payment_source']['paypal']['name']['surname'],
+                'user_email'=> $response['payment_source']['paypal']['email_address'],
+                'payment_status'=> $response['payment_source']['paypal']['account_status'],
+                'currency'=> 'USD',
+                'amount'=> $response['purchase_units'][0]['payments']['captures'][0]['amount']['value'],
+                
+            ]);
            return "paymeny seccc";
         }else{
             return redirect()->route('paypal_cancel');

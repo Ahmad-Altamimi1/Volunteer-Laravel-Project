@@ -13,8 +13,8 @@
 	<meta name="author" content="Untree.co">
 	<link rel="shortcut icon" href="favicon.png">
 
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<meta name="description" content="Volunteer work in training and education " />
+	<meta name="keywords" content="Volunteer training  education" />
 	
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="css/glightbox.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<title>Volunteer &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+	<title>Volunteer </title>
 </head>
 <body>
 
@@ -78,9 +78,9 @@
 								<span></span>
 							</a>
 
-							<a href="#" class="call-us d-flex align-items-center">
+							<a href="tel:+962798540904" class="call-us d-flex align-items-center">
 								<span class="icon-phone"></span>
-								<span>123-489-9381</span>
+								<span>0798540904</span>
 							</a>
 						</div>
 					</div>
@@ -90,22 +90,23 @@
 		</div>
 	</nav>
 
-	<div class="hero overlay" style="background-image: url('images/hero_2.jpg')">
+	<div class="hero overlay" style="background-image: url('images/classroom-1.png')">
 		<div class="container">
 			<div class="row align-items-center justify-content-between">
 				<div class="col-lg-6 text-left">
 					<span class="subheading-white text-white mb-3" data-aos="fade-up">Volunteer</span>
 					<h1 class="heading text-white mb-2" data-aos="fade-up">Give a helping hand to those who need it!</h1>
-					<p data-aos="fade-up" class=" mb-5 text-white lead text-white-50">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum minima dignissimos hic mollitia eius et quam ducimus maiores eos magni.</p>
+					<p data-aos="fade-up" class=" mb-5 text-white lead text-white-50">program to help increase access to education in communities around jordan</p>
 					<p data-aos="fade-up"  data-aos-delay="100">
-						<a href="#" class="btn btn-primary me-4 d-inline-flex align-items-center"> <span class="icon-attach_money me-2"></span><span>Donate Now</span></a> 
-						<a href="https://www.youtube.com/watch?v=mwtbEGNABWU" class="text-white glightbox d-inline-flex align-items-center"><span class="icon-play me-2"></span><span>Watch the video</span></a>
+						<a href="single" class="btn btn-primary me-4 d-inline-flex align-items-center"> <span class="icon-attach_money me-2"></span><span>Donate Now</span></a> 
+						<a href="https://www.youtube.com/watch?v=7b1qBE_Icbw&t=911s" class="text-white glightbox d-inline-flex align-items-center"><span class="icon-play me-2"></span><span>Watch the video</span></a>
 					</p>		
 					
 				</div>
 
 				<div class="col-lg-5">
-					<form action="#" class="bg-white p-5 rounded donation-form" data-aos="fade-up">
+					<form action="paypal" method="POST" class="bg-white p-5 rounded donation-form" data-aos="fade-up">
+						@csrf
 						<h3>Quick Donation Form</h3>
 						<div class="form-field mb-3">
 							<label for="amount-1" class="amount js-amount" data-value="1.00">
@@ -131,7 +132,8 @@
 						</div>
 						<div class="field-icon">
 							<span>$</span>
-							<input type="text" placeholder="0.00" class="form-control px-4" name="donate-value" value="1.00">
+							<input type="text" placeholder="0.00" class="form-control px-4" name="price" value="1.00">
+
 						</div>
 						<div class="form-field mb-3">
 							<input type="text" placeholder="Name" class="form-control px-4">
@@ -169,7 +171,7 @@
 	</div>
 
 
-	<div class="section flip-section" style="background-image: url('images/img_v_2-min.jpg')">
+	<div class="section flip-section" style="background-image: url('images/classroom-1.png')">
 		<div class="blob-1">
 			<img src="images/blob.png" alt="Image" class="img-fluid">
 		</div>
@@ -514,7 +516,7 @@
 
 
 
-	<div class="section flip-section secondary-bg" style="background-image: url('images/img_v_4-min.jpg')">
+	<div class="section flip-section secondary-bg" style="background-image: url('images/classroom-1.png')">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 mx-auto text-center">
