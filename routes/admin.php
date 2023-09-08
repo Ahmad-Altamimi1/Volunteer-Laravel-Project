@@ -23,16 +23,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::view('pages/index','pages.home');
-Route::view('pages/about', 'pages.about');
-Route::view('pages/contact', 'pages.contact');
-Route::view('pages/causes', 'pages.causes');
-Route::view('pages/news', 'pages.news');
+
 
 
 
 
 
 require __DIR__.'/admin.php';
-
-require __DIR__ . '/auth.php';

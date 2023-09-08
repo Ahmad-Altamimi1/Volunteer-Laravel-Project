@@ -27,6 +27,7 @@ Route::get('/single', function () {
     return view('pages.contact');
 });
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -49,6 +50,5 @@ Route::get('paypal/success', [PaypalController::class, 'success'])->name('succes
 Route::get('paypal/cancel', [PaypalController::class, 'cancel'])->name('paypal_cancel'); // Use 'cancel' method for GET
 
 
-require __DIR__.'/admin.php';
 
 require __DIR__ . '/auth.php';
