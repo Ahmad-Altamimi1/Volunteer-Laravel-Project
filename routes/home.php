@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductsController;
@@ -20,7 +19,6 @@ use App\Http\Controllers\PaypalController;
 
 Route::get('/', function () {
     return view('welcome');
-   
 });
 // Route::get('/home', function () {
 //     return view('pages.index');
@@ -36,7 +34,7 @@ Route::get('/dashboard', function () {
 
 
 // home route 
-Route::get('/home', [CategoryController::class,'index']);
+Route::get('/home', [CategoryController::class, 'index']);
 Route::resource('pages/', ProductsController::class);
 
 
