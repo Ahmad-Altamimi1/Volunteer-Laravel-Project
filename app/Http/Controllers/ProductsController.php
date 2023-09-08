@@ -13,7 +13,7 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function product()
     {
         $products = Products::all();
         return view('pages.products', ['products' => $products]);

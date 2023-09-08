@@ -54,3 +54,12 @@ Route::get('paypal/cancel', [PaypalController::class, 'cancel'])->name('paypal_c
 
 
 require __DIR__ . '/auth.php';
+
+
+
+
+
+
+
+
+

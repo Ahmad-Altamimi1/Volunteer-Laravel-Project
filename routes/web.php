@@ -20,7 +20,7 @@ use App\Http\Controllers\PaypalController;
 
 Route::get('/', function () {
     return view('welcome');
-   
+
 });
 // Route::get('/home', function () {
 //     return view('pages.index');
@@ -35,6 +35,30 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
+
+Route::get('pages/index', [Controller::class, 'showhome'])
+    ->name('home');
+
+Route::get('pages/about', [Controller::class, 'showabout'])
+    ->name('about');
+
+Route::get('pages/contact', [Controller::class, 'showcontact'])
+    ->name('contact');
+
+Route::get('pages/causes', [Controller::class, 'showcauses'])
+    ->name('causes');
+
+Route::get('pages/news', [Controller::class, 'shownews'])
+    ->name('news');
+
+
+Route::view('/loadmins/login', 'loadmins.login');
+    
+// Route::view('pages/index', 'pages/index');
+// Route::view('pages/about', 'pages/about');
+// Route::view('pages/contact', 'pages/contact');
+// Route::view('pages/causes', 'pages/causes');
+// Route::view('pages/news', 'pages.news');
 // home route 
 Route::get('/home', [CategoryController::class,'index']);
 Route::resource('pages/', ProductsController::class);
