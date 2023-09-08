@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('paypals', function (Blueprint $table) {
             $table->id();
             $table->string('paymen_id');
-            $table->string('user_id');
+            $table->string('user_name');
             $table->string('user_email');
             $table->float('amount', 10, 2);
             $table->string('currency');
